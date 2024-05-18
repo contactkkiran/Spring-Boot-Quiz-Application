@@ -1,4 +1,4 @@
-package com.telsuko.quizapp;
+package com.kiran.quizapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
