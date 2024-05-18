@@ -1,13 +1,11 @@
-package com.telsuko.quizapp.service;
+package com.kiran.quizapp.service;
 
-import com.telsuko.quizapp.Question;
-import com.telsuko.quizapp.dao.QuestionDao;
+import com.kiran.quizapp.Question;
+import com.kiran.quizapp.dao.QuestionDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.List;

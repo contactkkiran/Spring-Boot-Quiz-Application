@@ -1,6 +1,6 @@
-package com.telsuko.quizapp.dao;
+package com.kiran.quizapp.dao;
 
-import com.telsuko.quizapp.Question;
+import com.kiran.quizapp.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

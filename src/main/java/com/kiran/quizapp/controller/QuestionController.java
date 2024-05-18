@@ -1,10 +1,9 @@
-package com.telsuko.quizapp.controller;
+package com.kiran.quizapp.controller;
 
-import com.telsuko.quizapp.Question;
-import com.telsuko.quizapp.service.QuestionService;
+import com.kiran.quizapp.Question;
+import com.kiran.quizapp.service.QuestionService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +24,7 @@ public class QuestionController {
     }
 
 
-//    get questions by category
+//    get questions by  category
     @GetMapping("category/{category}")
     public ResponseEntity<List<Question>> getQuestionByCategory(@PathVariable String category){
 

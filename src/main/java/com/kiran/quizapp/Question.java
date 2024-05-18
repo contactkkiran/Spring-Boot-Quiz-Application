@@ -1,4 +1,4 @@
-package com.telsuko.quizapp;
+package com.kiran.quizapp;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
