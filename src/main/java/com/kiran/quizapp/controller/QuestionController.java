@@ -13,35 +13,40 @@ import java.util.List;
 @RestController
 @RequestMapping("question")
 public class QuestionController {
+
+    private final QuestionService questionService;
     @Autowired
-    QuestionService questionService;
-//    Get All questions
+    //    Get All questions
+    public QuestionController(QuestionService questionService) {
+        this.questionService = questionService;
+    }
 
     @GetMapping("allQuestions")
-    public ResponseEntity<List<Question>> getAllQuestions(){
+    public ResponseEntity<List<Question>> getAllQuestions() {
 
         return questionService.getAllQuestions();
     }
 
 
-//    get questions by  category
+    //    get questions by  category
     @GetMapping("category/{category}")
-    public ResponseEntity<List<Question>> getQuestionByCategory(@PathVariable String category){
+    public ResponseEntity<List<Question>> getQuestionByCategory(@PathVariable String category) {
 
-        return  questionService.getQuestionByCategory(category);
+        return questionService.getQuestionByCategory(category);
     }
 
 //    Add question
 
     @PostMapping("add")
-    public ResponseEntity<String> addQuestion(@RequestBody Question question){
+    public ResponseEntity<String> addQuestion(@RequestBody Question question) {
 
         return questionService.addQuestion(question);
     }
-    @PostMapping("delete")
-    public void deleteQuestion(@RequestBody Question question){
 
-         questionService.deleteQuestion(question);
+    @PostMapping("delete")
+    public void deleteQuestion(@RequestBody Question question) {
+
+        questionService.deleteQuestion(question);
     }
 
 }
