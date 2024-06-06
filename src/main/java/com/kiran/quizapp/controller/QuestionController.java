@@ -21,7 +21,7 @@ public class QuestionController {
         this.questionService = questionService;
     }
 
-    @GetMapping("allQuestions")
+    @GetMapping("getAllQuestions")
     public ResponseEntity<List<Question>> getAllQuestions() {
 
         return questionService.getAllQuestions();
@@ -37,13 +37,13 @@ public class QuestionController {
 
 //    Add question
 
-    @PostMapping("add")
+    @PostMapping("addQuestion")
     public ResponseEntity<String> addQuestion(@RequestBody Question question) {
 
         return questionService.addQuestion(question);
     }
 
-    @PostMapping("delete")
+    @PostMapping("deleteQuestion")
     public void deleteQuestion(@RequestBody Question question) {
 
         questionService.deleteQuestion(question);
