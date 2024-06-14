@@ -53,4 +53,9 @@ public class QuestionService {
     public void deleteQuestion(Question question) {
         questiondao.delete(question);
     }
+
+    public void deleteQuestionByID(int id) {
+        questiondao.deleteById(id);
+    }
+
 }
