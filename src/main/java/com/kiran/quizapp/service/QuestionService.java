@@ -1,6 +1,6 @@
 package com.kiran.quizapp.service;
 
-import com.kiran.quizapp.Question;
+import com.kiran.quizapp.model.Question;
 import com.kiran.quizapp.dao.QuestionDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -68,7 +68,7 @@ public class QuestionService {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return new ResponseEntity<>("Failed", HttpStatus.BAD_REQUEST);;
+        return new ResponseEntity<>("Failed", HttpStatus.BAD_REQUEST);
     }
 
 }

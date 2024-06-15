@@ -1,6 +1,6 @@
 package com.kiran.quizapp.controller;
 
-import com.kiran.quizapp.Question;
+import com.kiran.quizapp.model.Question;
 import com.kiran.quizapp.service.QuestionService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
