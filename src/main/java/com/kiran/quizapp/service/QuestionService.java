@@ -68,7 +68,7 @@ public class QuestionService {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return new ResponseEntity<>("Failed", HttpStatus.BAD_REQUEST);;
+        return new ResponseEntity<>("Failed", HttpStatus.BAD_REQUEST);
     }
 
 }
