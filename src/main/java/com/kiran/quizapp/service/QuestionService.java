@@ -50,12 +50,25 @@ public class QuestionService {
         return new ResponseEntity<>("failed", HttpStatus.BAD_REQUEST);
     }
 
-    public void deleteQuestion(Question question) {
-        questiondao.delete(question);
+
+    public ResponseEntity<String> deleteQuestion(Question question) {
+        try {
+            questiondao.delete(question);
+            return new ResponseEntity<>("Success", HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>("failed", HttpStatus.BAD_REQUEST);
     }
 
-    public void deleteQuestionByID(int id) {
-        questiondao.deleteById(id);
+    public ResponseEntity<String> deleteQuestionByID(int id) {
+        try {
+            questiondao.deleteById(id);
+            return new ResponseEntity<>("Success", HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>("Failed", HttpStatus.BAD_REQUEST);;
     }
 
 }

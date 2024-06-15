@@ -43,16 +43,16 @@ public class QuestionController {
         return questionService.addQuestion(question);
     }
 
-    @PostMapping("/deleteQuestion")
-    public void deleteQuestion(@RequestBody Question question) {
+    @PostMapping("deleteQuestion")
+    public ResponseEntity<String> deleteQuestion(@RequestBody Question question) {
 
-        questionService.deleteQuestion(question);
+        return questionService.deleteQuestion(question);
     }
 
-    @PostMapping("/delete")
-    public void deleteQuestionByID(@RequestParam Integer id) {
+    @PostMapping("delete")
+    public ResponseEntity<String> deleteQuestionByID(@RequestParam Integer id) {
 
-        questionService.deleteQuestionByID(id);
+        return questionService.deleteQuestionByID(id);
     }
 
 }
