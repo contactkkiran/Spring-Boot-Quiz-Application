@@ -24,5 +24,6 @@ public class QuizService {
         Quiz quiz = new Quiz();
         quiz.setTitle(title);
 //        quiz.
+        return null;
     }
 }
